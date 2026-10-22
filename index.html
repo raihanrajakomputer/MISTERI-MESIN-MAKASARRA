@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystery Ball</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="login-page" class="page active">
+  <div class="login-card">
+    <div class="eyebrow">★ MESING MISTERI ★</div>
+    <h1>MYSTERY<br><span>BALL</span></h1>
+    <p class="tagline">Salamakki battu mae!</p>
+    <p class="login-question">Nai arenta?</p>
+    <input id="name-input" type="text" maxlength="18" placeholder="Tulis arengta...">
+    <button id="login-btn" class="primary-btn">MASUK RI MESING</button>
+    <p class="tiny">Pemain baru tarimai 1000 poin.</p>
+  </div>
+</section>
+
+<section id="game-page" class="page">
+  <header class="topbar">
+    <div class="brand">MYSTERY<span>BALL</span></div>
+    <div class="player">
+      <span id="player-name">PAKARENA</span>
+      <div class="points-badge">● <strong id="points">1000</strong> POIN</div>
+    </div>
+  </header>
+
+  <main class="game-layout">
+    <div class="intro">
+      <p class="eyebrow">CINI'KI APA NA EROI</p>
+      <h2>APA<br>NA NIALLA?</h2>
+      <div class="hint">Se're putaran = 150 poin.</div>
+    </div>
+
+    <div class="machine-wrap">
+      <div class="machine">
+        <div class="machine-sign">MYSTERY<br><small>BALL</small></div>
+
+        <div class="machine-glass" id="machine-glass">
+          <div class="shine"></div>
+          <div class="balls">
+            <div class="ball orange"></div>
+            <div class="ball yellow"></div>
+            <div class="ball orange small"></div>
+            <div class="ball yellow small"></div>
+            <div class="ball orange"></div>
+            <div class="ball yellow"></div>
+            <div class="ball orange small"></div>
+          </div>
+          <div class="cartoon-face">
+            <span class="eye left"></span>
+            <span class="eye right"></span>
+            <span class="mouth"></span>
+          </div>
+        </div>
+
+        <div class="machine-body">
+          <div class="machine-label">SE'RE PUTARAN • 150 POIN</div>
+          <button id="spin-btn" class="spin-btn">PUTAR <span>↻</span></button>
+          <div class="dispense" id="dispense">?</div>
+        </div>
+
+        <div class="machine-base"></div>
+      </div>
+    </div>
+
+    <section class="result-card">
+      <span class="result-label">HASILTA</span>
+      <div id="result-icon" class="result-icon">?</div>
+      <h3 id="result-title">Natunggumi.</h3>
+      <p id="result-message">Pencet PUTAR, antu na ball na e'rannu.</p>
+    </section>
+
+    <section class="collection">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">BALL-BALLTA</p>
+          <h2>KOLEKSI</h2>
+        </div>
+        <span id="collection-count">0 / 8</span>
+      </div>
+      <div id="collection-list" class="collection-grid"></div>
+    </section>
+  </main>
+</section>
+
+<!-- Popup tambah poin -->
+<div id="reward-overlay" class="modal-overlay" aria-hidden="true">
+  <div class="reward-modal" role="dialog" aria-modal="true" aria-labelledby="reward-title">
+    <button id="close-reward" class="close-modal" aria-label="Tutup">×</button>
+    <div class="reward-ball">+</div>
+    <p class="eyebrow">POINNU LAKBUSUKMI</p>
+    <h2 id="reward-title">Erok tambah poin?</h2>
+    <p>
+      Lampa ri TikTok-ku, follow akun <b>@ryoiko_</b>,
+      terus bali' mae ri sini untuk alle bonus poin.
+    </p>
+
+    <div class="reward-actions">
+      <button id="tiktok-btn" class="tiktok-btn">LAMPA RI TIKTOK</button>
+      <button id="claim-btn" class="claim-btn">LE'BA' FOLLOW • ALLE +500</button>
+    </div>
+
+    <p class="modal-note">
+      Pencet di luar kotak pun bisa untuk tutup. Follow tidak bisa diverifikasi otomatis oleh website,
+      jadi bonus diklaim secara manual.
+    </p>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
